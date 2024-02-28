@@ -10,5 +10,29 @@
     {% for i in names %}
     <h1>{{i}}</h1>
     {% endfor %}
+    <br>
+    <h1>forloop.counter</h1>
+    {% for i in names %}
+    <h1>{{forloop.counter}} {{i}} </h1>
+    {% endfor %}
+    <br>
+
+    <h1>forloop.counter0</h1>
+    {% for i in names %}
+    <h1>{{forloop.counter0}} {{i}}</h1>
+    {% endfor %}
+    <br>
+
+    <h1>forloop.revcounter</h1>
+    {% for i in names %}
+    <h1>{{forloop.revcounter}} {{i}}</h1>
+    {% endfor %}	
+    <br>
+
+    <h1>forloop.revcounter0</h1>
+    {% for i in names %}
+    <h1>{{forloop.revcounter0}} {{i}}</h1>
+    {% endfor %}
+
 </body>
 </html>
