@@ -32,3 +32,15 @@ def student(request):
         ]
     }
     return render(request,'student.html',names)
+
+def data(request):
+    cities_details = {
+    'cities':[
+        {'name':'Mumbai','population':'19,000,000','country':'India'},
+        {'name':'Calcutta','population':'15,000,000','country':'India'},
+        {'name':'New York','population':'20,000,000','country':'USA'},
+        {'name':'Chicago','population':'7,000,000','country':'USA'},
+        {'name':'Tokyo','population':'33,000,000','country':'Japan'}
+    ]
+    }
+    return render(request, 'task1.html', cities_details)

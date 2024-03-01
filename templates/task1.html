@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <ul>
+    {% for i in cities %}
+        {% if i.country == "India" %} 
+        <li>{{i.country}}</li>
+            <ul>
+                <li>{{i.name}}: {{i.population}}</li>
+            </ul>
+        {% elif i.country == "USA" %}
+            <li>{{i.country}}</li>
+            <ul>
+                <li>{{i.name}}: {{i.population}}</li>
+            </ul>
+        {% elif i.country == "Japan" %}
+            <li>{{i.country}}</li>
+            <ul>
+                <li>{{i.name}}: {{i.population}}</li>
+            </ul>
+        {%endif%}
+    {%endfor %} -->
+    {% regroup cities by country as c_1 %}
+    <ul>
+        {% for c in c_1 %}
+        <li>{{c.grouper}}
+        <ul>
+            {% for city in c.list%}
+            <li>{{city.name}}:{{city.population}}</li>
+            {%endfor%}
+        </ul>
+    </li>
+        {%endfor%}
+    </ul>
+</body>
+</html>

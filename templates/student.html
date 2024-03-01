@@ -41,9 +41,8 @@
             <td>{{student.gender|first}}</td>
             <td>{{student.email|last}}</td>
             <td>{{student.first_name|join:' '}}</td>
-            <td>{{student.V}}</td>
-            <td>{{student|add:"Good"}}</td>
-
+            <td>{{student.first_name.2}}</td>
+            <td>{{student.first_name|add:'good'}}</td>
         </tr>
         {% endfor %}
     </table>
